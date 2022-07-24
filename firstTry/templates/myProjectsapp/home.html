@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1> Look at my {{ title }}</h1>
+
+    {% if projects %}
+        <div class="container">
+            <table >
+                {% for proj in projects %}
+                {% cycle '<tr>' '' %}
+                <td>
+                        <div class="col-md-10">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success ">{{ proj.lang }}</strong>
+          <h3 class="mb-0">{{ proj.name }}</h3>
+          <div class="mb-1 text-muted">{{ proj.create_date }}</div>
+          <h5 class="mb-auto">{{ proj.title }}</h5>
+            <p class="mb-auto">{{ proj.text }}</p>
+        </div>
+      </div>
+    </div>
+                </td>
+                {% cycle '' '</tr>' %}
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+    <h2> Nothing </h2>
+    {% endif %}
+        </div>
+{% endblock %}
