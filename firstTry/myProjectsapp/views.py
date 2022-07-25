@@ -12,7 +12,7 @@ def home(request):
 
 
 def python(request):
-    py_proj = Project.objects.filter(lang='python')
+    py_proj = Project.objects.select_related('category').filter(category__name='Python').order_by('-id')
     py_dict = {
         'title': 'PythonProjects',
         'projects': py_proj
@@ -21,7 +21,7 @@ def python(request):
 
 
 def kotlin(request):
-    ko_proj = Project.objects.filter(lang='kotlin')
+    ko_proj = Project.objects.select_related('category').filter(category__name='Kotlin').order_by('-id')
     ko_dict = {
         'title': 'KotlinProjects',
         'projects': ko_proj

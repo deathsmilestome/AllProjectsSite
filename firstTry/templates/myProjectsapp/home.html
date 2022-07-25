@@ -17,10 +17,13 @@
                         <div class="col-md-10">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success ">{{ proj.lang }}</strong>
-          <h3 class="mb-0">{{ proj.name }}</h3>
+          <strong class="d-inline-block mb-2 text-success ">{{ proj.category }}</strong>
+          <h2 class="mb-0">{{ proj.name }}</h2>
           <div class="mb-1 text-muted">{{ proj.create_date }}</div>
           <h5 class="mb-auto">{{ proj.title }}</h5>
+            {% if proj.path %}
+          <a href='{{ proj.path }}' class="link-success" >Look at code </a>
+            {% endif %}
             <p class="mb-auto">{{ proj.text }}</p>
         </div>
       </div>
