@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('python', views.python, name='python'),
-    path('kotlin', views.kotlin, name='kotlin')
+    path('python', views.python, name='Python'),
+    path('kotlin', views.kotlin, name='Kotlin')
 ]

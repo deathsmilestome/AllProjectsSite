@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Category
 
 
 def home(request):
     projects = Project.objects.order_by('-id')
+    categories = Category.objects.all().values('name')
     home_dict = {
         'title': 'Projects',
-        'projects': projects
+        'projects': projects,
+        'categories': categories
     }
     return render(request, 'myProjectsapp/home.html', home_dict)
 
