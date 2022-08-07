@@ -7,6 +7,6 @@
 
 ## API
 
-![image](https://user-images.githubusercontent.com/80523414/181931834-4e678290-e962-4581-94ce-fba37b78dcc9.png)
+![image](https://user-images.githubusercontent.com/80523414/183294308-6a08dcf6-21c5-40e1-8b26-404577006f31.png)
 ![image](https://user-images.githubusercontent.com/80523414/181932097-731916a9-1248-422a-98cb-fb19a987c365.png)
 ![image](https://user-images.githubusercontent.com/80523414/181932508-c911bebb-8347-4c63-94da-0a9c9639ae01.png)
